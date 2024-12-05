@@ -27,6 +27,6 @@ p5.js:66694 Uncaught (in promise) TypeError: Cannot assign to read only property
 So, I renamed the `print()` function to `print1()`, which was probably a bad idea in light of usability and clarity.
 However, it works on Khan Academy!<br>
 I typically use the one (https://cdn.jsdelivr.net/gh/vExcess/library@main/p5.js) Vexcess (@VXS on KA) had modified for use on KA, which works but is currently a bit outdated.<br>
-I sometimes like to use functions like `beginClip()`/`endClip()` which are not included in that version.
+I, and most likely others as well, sometimes like to use functions like `beginClip()`/`endClip()` which are not included in that version.
 </p>
 
