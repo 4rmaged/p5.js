@@ -39,7 +39,7 @@ Here's a simple example if it helps:
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Testing p5.js</title>
+        <title>Thanks to Bluebird</title>
         
         <script src="https://cdn.jsdelivr.net/gh/4rmaged/p5.js@main/lib/p5.js"></script>
         <style>
@@ -52,8 +52,9 @@ Here's a simple example if it helps:
                 height:100%;
             }
             #container{
-                width:100%;
+                width:100vw;
                 height:100vh;
+                overflow-y: hidden;
             }
             canvas{
                 background-color:red;
@@ -61,21 +62,24 @@ Here's a simple example if it helps:
         </style>
     </head>
     <body>
-        <div id="container"></div>
+        <div id="container"><canvas id="mycanvas" alt="Oops, it looks like your browser might not support the canvas element!"></canvas></div>
         <script type>
-            let x = 0;
+            let x=0;
             function setup(){
                 let b = document.querySelector("#container").getBoundingClientRect();
-                let canvas = createCanvas(b.width, b.height);
-                canvas.parent("container");
+                createCanvas(b.width,b.height,document.querySelector("#mycanvas"));
                 fill("black");
+                // You have to use `print1()` instead of `print()`
+                // because of bad ideas inacted my me!
+                print1("Hello, world!");
             }
             function draw(){
                 background("orange");
-                ellipse(x, height/2, 20, 20);
+                ellipse(x,height/2,20,20);
                 x++;
             }
         </script>
+        <!--<script>-->
     </body>
 </html>
 ```
