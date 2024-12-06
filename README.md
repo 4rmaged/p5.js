@@ -70,7 +70,7 @@ Here's a simple example if it helps:
                 createCanvas(b.width,b.height,document.querySelector("#mycanvas"));
                 fill("black");
                 // You have to use `print1()` instead of `print()`
-                // because of bad ideas inacted my me!
+                // because of bad ideas enacted my me!
                 print1("Hello, world!");
             }
             function draw(){
