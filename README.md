@@ -30,3 +30,52 @@ I typically use the one (https://cdn.jsdelivr.net/gh/vExcess/library@main/p5.js)
 I, and most likely others as well, sometimes like to use functions like `beginClip()`/`endClip()` which are not included in that version.
 </p>
 
+<h3>Using this P5.js fork</h3>
+
+Here's a simple example if it helps:
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Testing p5.js</title>
+        
+        <script src="https://cdn.jsdelivr.net/gh/4rmaged/p5.js@main/lib/p5.js"></script>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                width:100%;
+                height:100%;
+            }
+            #container{
+                width:100%;
+                height:100vh;
+            }
+            canvas{
+                background-color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type>
+            let x = 0;
+            function setup(){
+                let b = document.querySelector("#container").getBoundingClientRect();
+                let canvas = createCanvas(b.width, b.height);
+                canvas.parent("container");
+                fill("black");
+            }
+            function draw(){
+                background("orange");
+                ellipse(x, height/2, 20, 20);
+                x++;
+            }
+        </script>
+    </body>
+</html>
+```
