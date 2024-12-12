@@ -1,6 +1,6 @@
 <h1>Up-to-date (for now) version of P5.js that works on Khan Academy</h1>
 <!-- Oh dear, I'm not so good at this markdown thing. -->
-<p>I was looking at a project (https://www.khanacademy.org/computer-programming/p5js-on-ka/5684432689086464) made by Bluebird (username @bluebird03 on KA and @birdofblue on Github) where he said: </p>
+<p>I was looking at a project (https://www.khanacademy.org/computer-programming/p5js-on-ka/5684432689086464) made by Bluebird (username @birdwatcher03 on KA and @birdofblue on Github) where he said: </p>
 
 > ... KA messes with the webpage environment .... The window object is frozen. This means you can't redefine properties of window. For a long time p5.js has included a polyfill of requestAnimationFrame that KA breaks. If we instead put our code in an iframe which is unfrozen, the polyfill shouldn't break and p5.js should run normally. Then I can move on to figuring out the thumbnail, and little quirks.
 > So far, somewhat good.
